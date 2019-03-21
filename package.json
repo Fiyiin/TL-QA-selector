@@ -4,7 +4,7 @@
   "description": "Generate random team leads and quality accessors",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nyc mocha ./source/test --timeout 10s --exit"
   },
   "repository": {
     "type": "git",
@@ -18,9 +18,12 @@
   "homepage": "https://github.com/Fiyiin/TL-QA-selector#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
+    "dotenv": "^6.2.0",
     "express": "^4.16.4",
-    "pg": "^7.9.0",
-    "dotenv": "^6.2.0"
+    "mocha": "^6.0.2",
+    "pg": "^7.9.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -29,6 +32,20 @@
     "@babel/preset-env": "^7.2.3",
     "eslint": "^5.11.1",
     "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.14.0"
+    "eslint-plugin-import": "^2.14.0",
+    "nyc": "^13.3.0"
+  },
+  "nyc": {
+    "require": [
+      "@babel/register"
+    ],
+    "reporter": [
+      "text",
+      "html",
+      "lcov",
+      "lcovonly"
+    ],
+    "sourceMap": false,
+    "instrument": true
   }
 }
