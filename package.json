@@ -4,6 +4,7 @@
   "description": "Generate random team leads and quality accessors",
   "main": "index.js",
   "scripts": {
+    "start": "babel-node source/app.js",
     "test": "nyc mocha ./source/test --timeout 10s --exit"
   },
   "repository": {
