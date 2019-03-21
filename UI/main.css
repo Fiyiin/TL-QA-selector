@@ -1,0 +1,109 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #eee;
+}
+main {
+    background-image: linear-gradient(to right bottom, rgb(31, 30, 30, 0.4), rgb(0, 0, 0)),url('./assets/img/black-and-white-board-game-chess-40796.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    padding: 3rem 5rem;
+    position: relative;
+}
+
+.ut-white {
+    color: #fff;
+    border-color: rgb(201, 181, 0);
+}
+
+.ut-gold {
+    color: rgb(209, 186, 55);
+    border-color: rgba(207, 202, 202, 0.705);
+}
+
+.ut-margin-top-sm {
+    margin-top: 1.5rem !important;
+}
+
+.ut-link {
+    text-decoration: none !important;
+}
+.wrap-card {
+    border: 3px solid rgb(201, 181, 0);
+    border-radius: 5px;
+    padding: 3rem 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.jumbotron {
+    background-color: rgba(31, 28, 28, 0.5);
+    padding: none !important;
+    position: relative
+}
+
+.heading-secondary {
+    color: rgb(209, 186, 55);
+
+}
+
+.heading-primary {
+    font-family: 'Baloo Chettan', cursive;
+    font-size: 5rem !important;
+    color: transparent;
+    text-align: center;
+    background-image: linear-gradient(to right bottom, rgb(248, 211, 3), rgb(241, 179, 7));
+    display: inline-block;
+    -webkit-background-clip: text;
+}
+.teamName-input, .teamName-input:focus, .teamName-input:active {
+    width: 60% !important;
+    text-align: center !important;
+    font-family: inherit;
+    margin: 0rem auto;
+    margin-top: 1rem;
+    border: none !important;
+    color: inherit !important;
+    font-size: 1rem;
+}
+
+.heading-sub {
+    font-size: 24px;
+}
+
+.heading-main {
+    font-size: 50px;
+    text-transform: uppercase;
+    font-family: 'Baloo Chettan', cursive;
+    color: rgb(241, 179, 7);
+}
+.quality-person, .team-lead {
+    text-transform: capitalize;
+    text-shadow: 1px 1px #000;
+    letter-spacing: 0.05rem;
+}
+
+.quality-person:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.btn-gold, .btn-gold:link {
+    background-color: rgb(184, 135, 0);
+    border: none;
+    color: black; 
+}
+
+.btn, .btn-gold:hover, .btn:hover .btn-gold:active, .btn-gold:visited{
+    background-color: rgb(241, 179, 7) !important;
+    outline: none !important;
+    border: none;
+
+}
+
+.btn-center {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 1.5rem; 
+}
