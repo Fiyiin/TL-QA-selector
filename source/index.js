@@ -1,15 +1,15 @@
 import express from 'express';
-import bodyparser from 'body-parser';
+import bodyParser from 'body-parser';
+import routes from './routes';
 import '@babel/polyfill';
 
-import routes from './routes';
 
 const PORT = process.env.PORT || 7000;
 
 const app = express();
 
-app.use(bodyparser.json());
-app.use(bodyparser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use('/api/v1', routes);
 app.use((req, res, next) => {
@@ -29,7 +29,7 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Sever running on port ${PORT}`);
+  console.log('Sever running');
 });
 
 
