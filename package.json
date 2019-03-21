@@ -1,0 +1,34 @@
+{
+  "name": "tl-qa",
+  "version": "1.0.0",
+  "description": "Generate random team leads and quality accessors",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fiyiin/TL-QA-selector.git"
+  },
+  "author": "Team-Ivy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fiyiin/TL-QA-selector/issues"
+  },
+  "homepage": "https://github.com/Fiyiin/TL-QA-selector#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "pg": "^7.9.0",
+    "dotenv": "^6.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "eslint": "^5.11.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0"
+  }
+}
