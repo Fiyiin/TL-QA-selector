@@ -16,13 +16,13 @@ class Team {
         status: 201,
         data: result,
       });
-    } catch(err) {
+    } catch (err) {
       if (err.code == 23505) {
         return res.status(409).json({
           status: 409,
           error: 'this team name already exist',
         });
-      } 
+      }
     }
   }
 
