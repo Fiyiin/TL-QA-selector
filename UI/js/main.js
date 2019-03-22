@@ -49,8 +49,8 @@ createTeamBtn.addEventListener('click', (e) => {
     teamName: teamInput.value,
     member: [],
   }
-  Array.prototype.forEach.call(memberInputs, ({value}) => {
-    if (value) membbody.member.push(value);
+  Array.prototype.forEach.call(memberInputs, ({ value }) => {
+    if (value) body.member.push(value);
   })
 
   fetch(`${url}/team`, {
