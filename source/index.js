@@ -17,6 +17,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use('/', express.static(path.join(__dirname, '../UI')));
 
+app.use('/', express.static(path.join(__dirname, '../UI')));
+
 app.use('/api/v1', routes);
 app.use((req, res, next) => {
   const error = new Error('Not found');
