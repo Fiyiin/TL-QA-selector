@@ -2,6 +2,7 @@ body {
     font-family: 'Poppins', sans-serif;
     color: #eee;
 }
+
 main {
     background-image: linear-gradient(to right bottom, rgb(31, 30, 30, 0.4), rgb(0, 0, 0)),url('./assets/img/black-and-white-board-game-chess-40796.jpg');
     background-position: center;
@@ -27,6 +28,8 @@ main {
 
 .ut-link {
     text-decoration: none !important;
+    background-color: Transparent;
+    border: none;
 }
 .wrap-card {
     border: 3px solid rgb(201, 181, 0);
@@ -106,4 +109,31 @@ main {
     margin: 0 auto;
     text-align: center;
     margin-top: 1.5rem; 
+}
+#myModal {
+    overflow: auto;
+    /* position: absolute; */
+}
+
+.modal-dialog{
+    overflow-y: initial !important
+}
+.modal-body{
+    /* height: 250px; */
+    overflow: auto;
+}
+.modal-backdrop {
+    position: static;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+}
+label, #register-header {
+    color: #000;
+}
+#register-header {
+    text-align: center;
 }

@@ -1,37 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Team Lead selector</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-		<link rel="stylesheet" href="main.css">
-		<style>
-				@import url('https://fonts.googleapis.com/css?family=Baloo+Chettan');
-				@import url('https://fonts.googleapis.com/css?family=Poppins:400,700');
-		</style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Baloo+Chettan');
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,700');
+    </style>
 </head>
+
 <body>
-  <main>
-      <div class="container wrap-card">
-					<div class="jumbotron">
-              <h1 class="display-4 text-center"><span class="heading-sub ut-white">document.getElementByName</span><span class= "heading-main"> ('TeamLead')</span></h1>
-              <p class="lead text-center ut-gold">With this everyone would end up Leading</p>
-              <hr class="my-4 ut-gold">
-              <div class="input-group input-group-lg teamName-input">
-                  <input type="text" class="form-control" placeholder="Enter name of team">
-              </div>
-              <div class="btn-center">
-                  <a class="btn btn-primary btn-lg btn-gold " href="team.html" role="button">Show Team Leads</a>
-              </div>
-              <p class="text-center ut-margin-top-sm"> dont have a team? <a href="#"><span class="ut-gold ut-link"> Create your team</span></a></p>
-          </div>
-			 </div>
-  </main>
-    
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <main>
+        <div class="container wrap-card">
+            <div class="jumbotron">
+                <h1 class="display-4 text-center"><span
+                        class="heading-sub ut-white">document.getElementByName</span><span class="heading-main">
+                        ('TeamLead')</span></h1>
+                <p class="lead text-center ut-gold">With this everyone would end up Leading</p>
+                <hr class="my-4 ut-gold">
+                <div class="input-group input-group-lg teamName-input">
+                    <input id="get-team" type="text" class="form-control" placeholder="Enter name of team">
+                </div>
+                <div class="btn-center">
+                    <a  id="show-team" class="btn btn-primary btn-lg btn-gold " href="team.html" role="button">Show Team Leads</a>
+                </div>
+                <p class="text-center ut-margin-top-sm"> dont have a team? <button type="button" id="gen-leaders" class="ut-gold ut-link"
+                        data-toggle="modal" data-target="#myModal">
+                        Create your team
+                    </button></p>
+            </div>
+            <!-- The Modal -->
+            <div class="modal" id="myModal" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 id="register-header" class="modal-title">Register a Team</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <form action="" id="form" class="needs-validation" novalidate>
+                                <div class="form-group">
+                                    <label for="uname">Team Name:</label>
+                                    <input type="text" class="form-control" id="new-team-name" placeholder="Enter team name"
+                                        name="uname" required>
+                                    <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="mem-one">Member:</label>
+                                    <input type="text" class="form-control member-input" id="mem-two" placeholder="Enter name"
+                                        name="pswd" required>
+                                    <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd">Member:</label>
+                                    <input type="text" class="form-control member-input" id="pwd" placeholder="Enter name"
+                                        name="pswd" required>
+                                    <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd">Member:</label>
+                                    <input type="text" class="form-control member-input" id="pwd" placeholder="Enter name"
+                                        name="pswd" required>
+                                    <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd">Member:</label>
+                                    <input type="text" class="form-control member-input" id="pwd" placeholder="Enter name"
+                                        name="pswd" required>
+                                    <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd">Member:</label>
+                                    <input type="text" class="form-control member-input" id="pwd" placeholder="Enter name"
+                                        name="pswd" required>
+                                    <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd">Member:</label>
+                                    <input type="text" class="form-control member-input" id="pwd" placeholder="Enter name"
+                                        name="pswd" required>
+                                    <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                </div>
+                                <button type="button" id="create-team-btn" class="btn btn-primary">Submit</button>
+                            </form>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
