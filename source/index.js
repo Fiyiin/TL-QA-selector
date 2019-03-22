@@ -1,6 +1,8 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import routes from './routes';
+import path from 'path';
+
 import '@babel/polyfill';
 
 
@@ -15,6 +17,8 @@ app.use((req, res, next) => {
   res.header('Access-Control-Allow-Headers', '*');
   next();
 });
+
+app.use('/', express.static(path.join(__dirname, '../UI')));
 
 app.use('/api/v1', routes);
 app.use((req, res, next) => {
@@ -32,6 +36,7 @@ app.use((err, req, res, next) => {
     },
   });
 });
+
 
 app.listen(PORT, () => {
   console.log(`Sever running on ${PORT}`);
