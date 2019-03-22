@@ -1,7 +1,7 @@
 import { describe, it } from 'mocha';
 import { use, request, expect } from 'chai';
 import chaiHttp from 'chai-http';
-import app from '../app';
+import app from '../index';
 
 use(chaiHttp);
 describe('Test TL-QA-Selector endpoints', () => {
@@ -12,7 +12,7 @@ describe('Test TL-QA-Selector endpoints', () => {
     expect(res.body).to.have.property('erorr');
     expect(res.body.error).to.have.property('status')
       .to.be.equal(404);
-    expect(res.body.error).to.have.property(message)
+    expect(res.body.error).to.have.property('message')
       .to.be.equal('Not found');
   });
 });
